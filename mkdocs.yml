@@ -1,0 +1,173 @@
+site_name: Learning Assisted
+site_description: Recorrido de fundamentos, agentes y vocabulario del oficio
+site_author: Alberto
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Modo Monokai
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.prune
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: es
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+- Inicio: index.md
+- Etiquetas: tags.md
+- Fundamentos:
+  - fundamentos/README.md
+  - Proyecto integrador: fundamentos/proyecto-integrador.md
+  - NotebookLM: fundamentos/notebooklm.md
+  - Git:
+    - fundamentos/00-git/README.md
+    - Glosario: fundamentos/00-git/glosario.md
+    - Cursos: fundamentos/00-git/cursos.md
+    - 01 — Tres commits: fundamentos/00-git/ejercicios/01-tres-commits.md
+    - 02 — Una rama: fundamentos/00-git/ejercicios/02-una-rama.md
+    - 03 — El remoto: fundamentos/00-git/ejercicios/03-el-remoto.md
+    - 04 — Historia de la clínica: fundamentos/00-git/ejercicios/04-historia-de-la-clinica.md
+  - Bases de datos:
+    - fundamentos/01-bases-de-datos/README.md
+    - Glosario: fundamentos/01-bases-de-datos/glosario.md
+    - Cursos: fundamentos/01-bases-de-datos/cursos.md
+    - 01 — Modelo en papel: fundamentos/01-bases-de-datos/ejercicios/01-modelo-en-papel.md
+    - 02 — Consultas: fundamentos/01-bases-de-datos/ejercicios/02-consultas.md
+    - 03 — Uniones y agregados: fundamentos/01-bases-de-datos/ejercicios/03-uniones-y-agregados.md
+    - 04 — Diseño y normalización: fundamentos/01-bases-de-datos/ejercicios/04-diseno-y-normalizacion.md
+    - 05 — Integridad y transacciones: fundamentos/01-bases-de-datos/ejercicios/05-integridad-y-transacciones.md
+    - 06 — Índices: fundamentos/01-bases-de-datos/ejercicios/06-indices.md
+    - '07 — Proyecto: agenda de clínica': fundamentos/01-bases-de-datos/ejercicios/07-proyecto-clinica.md
+  - Frontend, Node y React:
+    - fundamentos/02-frontend-node-react/README.md
+    - Glosario: fundamentos/02-frontend-node-react/glosario.md
+    - Cursos: fundamentos/02-frontend-node-react/cursos.md
+    - 01 — Ficha de producto: fundamentos/02-frontend-node-react/ejercicios/01-ficha-de-producto.md
+    - 02 — Carrito en vanilla: fundamentos/02-frontend-node-react/ejercicios/02-carrito-vanilla.md
+    - 03 — Servidor JSON: fundamentos/02-frontend-node-react/ejercicios/03-servidor-json.md
+    - 04 — CLI que resume un CSV: fundamentos/02-frontend-node-react/ejercicios/04-cli-resumen.md
+    - 05 — Lista filtrable en React: fundamentos/02-frontend-node-react/ejercicios/05-lista-react.md
+    - 06 — Formulario controlado: fundamentos/02-frontend-node-react/ejercicios/06-formulario-react.md
+    - 07 — Datos remotos: fundamentos/02-frontend-node-react/ejercicios/07-datos-remotos.md
+    - '08 — Proyecto: panel de pedidos': fundamentos/02-frontend-node-react/ejercicios/08-proyecto-panel.md
+  - HTTP:
+    - fundamentos/03-http/README.md
+    - Glosario: fundamentos/03-http/glosario.md
+    - Cursos: fundamentos/03-http/cursos.md
+    - 01 — Una transacción: fundamentos/03-http/ejercicios/01-una-transaccion.md
+    - 02 — Dos representaciones: fundamentos/03-http/ejercicios/02-dos-representaciones.md
+    - 03 — Repetir la petición: fundamentos/03-http/ejercicios/03-repetir-la-peticion.md
+    - 04 — Otro origen: fundamentos/03-http/ejercicios/04-otro-origen.md
+    - 05 — Contrato de la clínica: fundamentos/03-http/ejercicios/05-contrato-de-la-clinica.md
+  - Sistemas:
+    - fundamentos/04-sistemas/README.md
+    - Glosario: fundamentos/04-sistemas/glosario.md
+    - Cursos: fundamentos/04-sistemas/cursos.md
+    - 01 — La web no carga: fundamentos/04-sistemas/ejercicios/01-la-web-no-carga.md
+    - 02 — Primer arranque: fundamentos/04-sistemas/ejercicios/02-primer-arranque.md
+    - 03 — Nginx y un sitio estático: fundamentos/04-sistemas/ejercicios/03-nginx-estatico.md
+    - 04 — Imagen y contenedor: fundamentos/04-sistemas/ejercicios/04-imagen-y-contenedor.md
+    - 05 — Un Dockerfile propio: fundamentos/04-sistemas/ejercicios/05-dockerfile.md
+    - '06 — Compose: aplicación y base de datos': fundamentos/04-sistemas/ejercicios/06-compose.md
+    - '07 — Proyecto: entorno de la clínica': fundamentos/04-sistemas/ejercicios/07-proyecto-entorno.md
+    - 08 — HTTPS en el servidor: fundamentos/04-sistemas/ejercicios/08-https.md
+    - 09 — El proxy y el puerto de dentro: fundamentos/04-sistemas/ejercicios/09-proxy.md
+  - Backend PHP:
+    - fundamentos/05-backend-php/README.md
+    - Glosario: fundamentos/05-backend-php/glosario.md
+    - Cursos: fundamentos/05-backend-php/cursos.md
+    - 01 — CLI de facturas: fundamentos/05-backend-php/ejercicios/01-cli-facturas.md
+    - 02 — Una petición: fundamentos/05-backend-php/ejercicios/02-una-peticion.md
+    - 03 — Formulario, validación y salida: fundamentos/05-backend-php/ejercicios/03-formulario.md
+    - 04 — PDO y consultas parametrizadas: fundamentos/05-backend-php/ejercicios/04-pdo.md
+    - 05 — Sesión y login mínimo: fundamentos/05-backend-php/ejercicios/05-sesion.md
+    - 06 — Estructura: fundamentos/05-backend-php/ejercicios/06-estructura.md
+    - 07 — CSRF: fundamentos/05-backend-php/ejercicios/07-csrf.md
+    - 08 — API JSON: fundamentos/05-backend-php/ejercicios/08-api-json.md
+    - '09 — Proyecto: notas': fundamentos/05-backend-php/ejercicios/09-proyecto-notas.md
+  - Pruebas:
+    - fundamentos/06-pruebas/README.md
+    - Glosario: fundamentos/06-pruebas/glosario.md
+    - Cursos: fundamentos/06-pruebas/cursos.md
+    - 01 — Una función pura: fundamentos/06-pruebas/ejercicios/01-una-funcion-pura.md
+    - 02 — El caso que falla: fundamentos/06-pruebas/ejercicios/02-el-caso-que-falla.md
+    - 03 — La frontera HTTP: fundamentos/06-pruebas/ejercicios/03-la-frontera-http.md
+    - 04 — Qué no está probado: fundamentos/06-pruebas/ejercicios/04-que-no-esta-probado.md
+  - UI/UX:
+    - fundamentos/07-ui-ux/README.md
+    - Glosario: fundamentos/07-ui-ux/glosario.md
+    - Cursos: fundamentos/07-ui-ux/cursos.md
+    - 01 — Crítica con nombre: fundamentos/07-ui-ux/ejercicios/01-critica.md
+    - 02 — Flujo, antes de la pantalla: fundamentos/07-ui-ux/ejercicios/02-flujo.md
+    - 03 — Estados de la agenda: fundamentos/07-ui-ux/ejercicios/03-estados.md
+    - 04 — Jerarquía: fundamentos/07-ui-ux/ejercicios/04-jerarquia.md
+    - 05 — Accesibilidad en el diseño: fundamentos/07-ui-ux/ejercicios/05-accesibilidad.md
+    - 06 — Tres componentes: fundamentos/07-ui-ux/ejercicios/06-componentes.md
+    - 07 — Una prueba de cinco minutos: fundamentos/07-ui-ux/ejercicios/07-prueba.md
+    - '08 — Proyecto: pedir cita': fundamentos/07-ui-ux/ejercicios/08-proyecto-citas.md
+- Agentes:
+  - agentes/README.md
+  - Glosario: agentes/glosario.md
+  - Fuentes: agentes/fuentes.md
+  - 01 — El bucle: agentes/lecciones/01-el-bucle.md
+  - 02 — El encargo: agentes/lecciones/02-el-encargo.md
+  - 03 — El contexto: agentes/lecciones/03-el-contexto.md
+  - 04 — Leer antes de escribir: agentes/lecciones/04-leer-antes-de-escribir.md
+  - 05 — El plan: agentes/lecciones/05-el-plan.md
+  - 06 — Una rebanada: agentes/lecciones/06-una-rebanada.md
+  - 07 — Instrucciones que duran: agentes/lecciones/07-instrucciones-que-duran.md
+  - 08 — El diff es tuyo: agentes/lecciones/08-el-diff-es-tuyo.md
+  - 09 — Permisos y secretos: agentes/lecciones/09-permisos-y-secretos.md
+  - 10 — Parar: agentes/lecciones/10-parar.md
+  - 11 — Cierre: agentes/lecciones/11-cierre.md
+- Compendio:
+  - compendio/README.md
+  - Términos: compendio/terminos.md
+  - Frases en el trabajo: compendio/frases-trabajo.md
+  - Frases en entrevista: compendio/frases-entrevista.md

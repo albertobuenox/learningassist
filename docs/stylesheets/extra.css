@@ -1,0 +1,124 @@
+/* Monokai-inspired palette for Material */
+
+:root {
+  --md-primary-fg-color: #f92672;
+  --md-primary-fg-color--light: #ff6188;
+  --md-primary-fg-color--dark: #c41a57;
+  --md-primary-bg-color: #272822;
+  --md-primary-bg-color--light: #f8f8f2;
+  --md-accent-fg-color: #a6e22e;
+  --md-accent-fg-color--transparent: #a6e22e1a;
+  --md-accent-bg-color: #272822;
+  --md-accent-bg-color--light: #f8f8f2;
+}
+
+/* Dark (default): Monokai */
+[data-md-color-scheme="slate"] {
+  --md-hue: 70;
+  --md-default-fg-color: #f8f8f2;
+  --md-default-fg-color--light: #cfcfc2;
+  --md-default-fg-color--lighter: #75715e;
+  --md-default-fg-color--lightest: #49483e;
+  --md-default-bg-color: #272822;
+  --md-default-bg-color--light: #2e2f29;
+  --md-default-bg-color--lighter: #3e3d32;
+  --md-default-bg-color--lightest: #49483e;
+  --md-code-fg-color: #f8f8f2;
+  --md-code-bg-color: #1e1f1c;
+  --md-code-hl-color: #3e3d32;
+  --md-code-hl-number-color: #ae81ff;
+  --md-code-hl-special-color: #f92672;
+  --md-code-hl-function-color: #a6e22e;
+  --md-code-hl-constant-color: #ae81ff;
+  --md-code-hl-keyword-color: #f92672;
+  --md-code-hl-string-color: #e6db74;
+  --md-code-hl-name-color: #66d9ef;
+  --md-code-hl-operator-color: #f92672;
+  --md-code-hl-punctuation-color: #f8f8f2;
+  --md-code-hl-comment-color: #75715e;
+  --md-code-hl-generic-color: #fd971f;
+  --md-code-hl-variable-color: #fd971f;
+  --md-typeset-a-color: #66d9ef;
+  --md-typeset-mark-color: #e6db7466;
+  --md-admonition-bg-color: #2e2f29;
+  --md-footer-bg-color: #1e1f1c;
+  --md-footer-bg-color--dark: #1a1b18;
+}
+
+/* Light: paper with Monokai accents */
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #c41a57;
+  --md-code-bg-color: #f5f5f0;
+  --md-code-hl-number-color: #7a5ea8;
+  --md-code-hl-special-color: #f92672;
+  --md-code-hl-function-color: #6a9a14;
+  --md-code-hl-constant-color: #7a5ea8;
+  --md-code-hl-keyword-color: #f92672;
+  --md-code-hl-string-color: #9a8b2c;
+  --md-code-hl-name-color: #2a8fa3;
+  --md-code-hl-operator-color: #f92672;
+  --md-code-hl-comment-color: #75715e;
+  --md-code-hl-variable-color: #c46b0a;
+}
+
+/* Soften header to Monokai charcoal instead of flat pink bar */
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #1e1f1c;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  border-bottom: 1px solid #49483e;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: #a6e22e;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__link--active:focus,
+[data-md-color-scheme="slate"] .md-nav__link--active:hover {
+  color: #f92672;
+}
+
+/* Admonition accents closer to Monokai */
+[data-md-color-scheme="slate"] .md-typeset .admonition.info,
+[data-md-color-scheme="slate"] .md-typeset details.info {
+  border-color: #66d9ef;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .info > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .info > summary {
+  background-color: #66d9ef1a;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset details.warning {
+  border-color: #fd971f;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .warning > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .warning > summary {
+  background-color: #fd971f1a;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.success,
+[data-md-color-scheme="slate"] .md-typeset details.success {
+  border-color: #a6e22e;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .success > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .success > summary {
+  background-color: #a6e22e1a;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.tip,
+[data-md-color-scheme="slate"] .md-typeset details.tip {
+  border-color: #ae81ff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .tip > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset .tip > summary {
+  background-color: #ae81ff1a;
+}

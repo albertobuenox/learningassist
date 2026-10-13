@@ -1,0 +1,26 @@
+# Entorno y dependencias
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Salida de MkDocs (se regenera con mkdocs build)
+site/
+
+# Secretos y entorno local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secrets*
+id_rsa
+id_ed25519
+
+# Sistema / editor
+.DS_Store
+.idea/
+*.swp
+*.swo
