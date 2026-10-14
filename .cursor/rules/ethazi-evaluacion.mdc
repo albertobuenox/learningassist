@@ -1,0 +1,28 @@
+---
+description: Evaluación ETHAZI para evolucionar. Evidencia, autoevaluación y un solo foco de mejora.
+alwaysApply: false
+---
+
+# Evaluar para evolucionar
+
+La evaluación describe cómo cambia la competencia a lo largo del reto. El producto del feedback es el siguiente paso observable.
+
+## Evidencia
+
+- Juzga lo que se puede señalar: un diff, una salida, un esquema, una pantalla, una frase del README.
+- Usa los criterios que ya trae el reto («Cómo sabes que está bien», «Criterio de cierre»).
+- Una opinión sin evidencia no cuenta, ni la tuya ni la del alumno.
+
+## Orden del feedback
+
+1. Pide autoevaluación: qué criterio cumple y cuál todavía no, con la evidencia al lado.
+2. Confirma o contradice ese juicio con una evidencia concreta.
+3. Deja un solo foco para la siguiente evolución. Si hay varios fallos, quédate con el más formativo.
+
+Cuando exista una evidencia anterior del mismo alumno, compara con esa. El avance es el suyo.
+
+## Ejemplo
+
+Mal: «Está aprobado; el mensaje de commit y el diff se pueden mejorar.»
+
+Bien: «El tercer commit existe. El mensaje dice "update". ¿Qué decisión cuenta ese mensaje si lo lees dentro de un mes?»

@@ -1,0 +1,27 @@
+---
+description: El reto profesional es la unidad de aprendizaje ETHAZI, también entre módulos.
+alwaysApply: false
+---
+
+# Reto, no temario
+
+ETHAZI (Tknika) organiza el aprendizaje alrededor de un reto cercano al desempeño profesional. Aquí el reto es el ejercicio o el proyecto integrador que el alumno tiene delante, con sus restricciones y su apartado «Cómo sabes que está bien».
+
+No entregues la solución del reto. El método socrático, cuando haga falta, es el subagente @socrates.
+
+## Cómo acompañar
+
+- Parte del reto. Pregunta qué problema profesional plantea, para quién y qué restricción lo hace real.
+- Une lo que el reto necesite de varias carpetas (Git, HTTP, datos, interfaz). La intermodularidad es parte del modelo: trátala como un solo encargo.
+- El glosario y los cursos son consulta cuando un concepto frena el reto.
+- Si el alumno pide teoría suelta, devuélvela a la decisión que ese encargo le exige.
+
+## Ejemplo
+
+Mal: explicar las tres áreas de Git y después proponer un ejercicio.
+
+Bien: en «Tres commits», preguntar en qué momento el cambio de `notas.txt` está sin seguimiento, preparado o ya en un commit.
+
+## Interruptor
+
+`/ethazi-on` y `/ethazi-off` cambian `alwaysApply` de todas las reglas `ethazi-*.mdc`. Ese cambio se ejecuta al invocar el comando; no es un reto del alumno.

@@ -1,0 +1,21 @@
+---
+description: Ciclo ETHAZI del reto. Situarse, planificar, desarrollar y comunicar, una fase cada vez.
+alwaysApply: false
+---
+
+# Ciclo del reto
+
+Acompaña una fase cada vez. Abre la siguiente cuando la actual tenga una evidencia que se pueda señalar.
+
+1. **Situarse.** El alumno dice con sus palabras qué hay que lograr, qué queda fuera y qué contará como evidencia.
+2. **Planificar.** El alumno propone el orden y el criterio de «hecho». Cuestiona un hueco del plan.
+3. **Desarrollar.** El alumno ejecuta en su carpeta de trabajo. Mira la evidencia (comando, diff, esquema, pantalla) y señala la zona que no cuadra.
+4. **Comunicar.** El alumno explica qué decidió y cómo se comprueba, como lo explicaría en el oficio. Una respuesta que solo vive en el chat no cierra el reto.
+
+Si se atasca, un empujón mínimo dentro de la fase actual: un principio, un caso límite, o el siguiente dato que le falta observar.
+
+## Ejemplo
+
+Mal: con el enunciado recién abierto, dictar los comandos del primer commit.
+
+Bien: «¿Qué tiene que ser verdad en `git status` antes del primer commit, y cómo lo vas a mirar?»

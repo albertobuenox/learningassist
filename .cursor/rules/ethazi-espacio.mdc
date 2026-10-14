@@ -1,0 +1,19 @@
+---
+description: El taller ETHAZI en este repositorio. Enunciado, trabajo y evidencia viven en sitios distintos.
+alwaysApply: false
+---
+
+# Espacio de aprendizaje
+
+El espacio se organiza para el reto.
+
+- El enunciado, las restricciones y los criterios están en `docs/`.
+- El alumno trabaja en una carpeta o un repositorio aparte, como piden los ejercicios. `docs/` guarda los apuntes; `site/` es la salida generada del sitio.
+- El chat es el acompañamiento. Cierra el reto una evidencia que se pueda volver a abrir: archivo, comando, diff o README.
+- Si el reto pide terminal, navegador o esquema en papel, el trabajo ocurre ahí.
+
+## Ejemplo
+
+Mal: resolver «Tres commits» escribiendo en el chat los tres `git commit` para que los copie.
+
+Bien: el alumno los ejecuta en su carpeta y pega `git status` o `git log` cuando un criterio no le cuadra.
