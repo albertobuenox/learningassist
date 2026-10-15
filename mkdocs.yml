@@ -1,6 +1,9 @@
 site_name: Learning Assisted
 site_description: Recorrido de fundamentos, agentes y vocabulario del oficio
 site_author: Alberto
+site_url: https://albertobuenox.github.io/learningassist/
+repo_url: https://github.com/albertobuenox/learningassist
+repo_name: albertobuenox/learningassist
 
 theme:
   name: material

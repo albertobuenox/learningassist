@@ -1,0 +1,62 @@
+# Nombre que aparece en la pestaña Actions de GitHub
+name: Deploy docs
+
+# Cuándo se ejecuta este workflow
+on:
+  # En cada push a la rama main
+  push:
+    branches:
+      - main
+  # También se puede lanzar a mano desde Actions → Deploy docs → Run workflow
+  workflow_dispatch:
+
+# Permisos del token que usa el Action
+permissions:
+  # Necesario para que mkdocs gh-deploy pueda hacer push a la rama gh-pages
+  contents: write
+
+# Evita dos deploys a la vez (p. ej. varios pushes seguidos)
+concurrency:
+  group: pages
+  # No cancela un deploy ya en marcha; el siguiente espera su turno
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Máquina virtual Ubuntu donde se ejecutan los pasos
+    runs-on: ubuntu-latest
+    steps:
+      # Clona el repositorio en la máquina virtual
+      - uses: actions/checkout@v4
+
+      # Identidad de Git para los commits que crea gh-deploy en gh-pages
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      # Instala Python (cualquier 3.x reciente)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      # Número de semana UTC → cambia la clave de caché cada semana
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
+      # Reutiliza la carpeta .cache de MkDocs Material (plugins, etc.)
+      # para no descargarlo todo en cada ejecución
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      # Instala MkDocs y el tema Material desde requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Genera el sitio estático y lo publica en la rama gh-pages
+      # --force: sobrescribe sin preguntar si hay conflictos
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
