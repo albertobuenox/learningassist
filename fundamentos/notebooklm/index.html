@@ -1,0 +1,2123 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Recorrido de fundamentos, agentes y vocabulario del oficio">
+      
+      
+        <meta name="author" content="Alberto">
+      
+      
+        <link rel="canonical" href="https://albertobuenox.github.io/learningassist/fundamentos/notebooklm/">
+      
+      
+        <link rel="prev" href="../proyecto-integrador/">
+      
+      
+        <link rel="next" href="../00-git/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>NotebookLM - Learning Assisted</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fuentes-para-notebooklm" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Learning Assisted" class="md-header__button md-logo" aria-label="Learning Assisted" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Assisted
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NotebookLM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo Monokai"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Monokai" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/albertobuenox/learningassist" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    albertobuenox/learningassist
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Etiquetas
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Fundamentos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Agentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../compendio/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Compendio
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Assisted" class="md-nav__button md-logo" aria-label="Learning Assisted" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Learning Assisted
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/albertobuenox/learningassist" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    albertobuenox/learningassist
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Etiquetas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamentos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fundamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto-integrador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cómo-cargarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo cargarlo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bases de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontend-node-y-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Frontend, Node y React
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sistemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-backend-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Backend PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-uiux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. UI/UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proyecto-integrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proyecto integrador
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../00-git/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../01-bases-de-datos/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bases de datos
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../02-frontend-node-react/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend, Node y React
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../03-http/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../04-sistemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../05-backend-php/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend PHP
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../06-pruebas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pruebas
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../07-ui-ux/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../agentes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentes
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../compendio/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compendio
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cómo-cargarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo cargarlo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bases de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontend-node-y-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Frontend, Node y React
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sistemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-backend-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Backend PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-uiux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. UI/UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proyecto-integrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proyecto integrador
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fuentes-para-notebooklm">Fuentes para NotebookLM<a class="headerlink" href="#fuentes-para-notebooklm" title="Permanent link">&para;</a></h1>
+<p>Cinco cuadernos, uno por asignatura. En el plan gratuito cada cuaderno admite 50 fuentes y unas 500.000 palabras por fuente. Un solo cuaderno con todo el recorrido mezcla temas y responde peor.</p>
+<p>NotebookLM no recorre un sitio: <strong>una URL es una página</strong>. Si al importar solo ves un índice, esa página no sirve; abre el capítulo que tiene el texto y súbelo ese.</p>
+<h2 id="cómo-cargarlo">Cómo cargarlo<a class="headerlink" href="#cómo-cargarlo" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Crea el cuaderno con el nombre de la carpeta.</li>
+<li>Sube el <code>README.md</code> y el <code>glosario.md</code> de esa carpeta (archivo local). Así las respuestas usan las mismas palabras que los enunciados.</li>
+<li>Añade las URLs de abajo. Los PDF, descárgalos y súbelos como archivo: un enlace de descarga a veces llega como página intermedia y NotebookLM no ve el libro.</li>
+<li>No subas los archivos de <code>ejercicios/</code>. El cuaderno te los resolvería, y el criterio de esta carpeta es que los cierres tú.</li>
+</ol>
+<p>No sirven aquí los cursos de pago (Udemy, Laracasts cerrado, Refactoring UI), ni los gimnasios interactivos (SQLBolt, Flexbox Froggy, SQLZoo): no hay un texto que importar. El manual completo de PostgreSQL en PDF pasa el límite de palabras; usa las páginas sueltas.</p>
+<p>Cuando una fuente esté en inglés, pregunta en español igual. Pide que cite la fuente.</p>
+<hr />
+<h2 id="1-bases-de-datos">1. Bases de datos<a class="headerlink" href="#1-bases-de-datos" title="Permanent link">&para;</a></h2>
+<p>Cuaderno: <code>01 Bases de datos</code>. Archivos locales: <code>01-bases-de-datos/README.md</code>, <code>01-bases-de-datos/glosario.md</code>.</p>
+<p>Modelo, claves, consultas, uniones, agregados, restricciones, transacciones, índices, <code>EXPLAIN</code>. El motor es PostgreSQL 18.</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consultar una tabla</td>
+<td>https://www.postgresql.org/docs/current/tutorial-select.html</td>
+</tr>
+<tr>
+<td>Join</td>
+<td>https://www.postgresql.org/docs/current/tutorial-join.html</td>
+</tr>
+<tr>
+<td>Agregados</td>
+<td>https://www.postgresql.org/docs/current/tutorial-agg.html</td>
+</tr>
+<tr>
+<td><code>FROM</code>, <code>JOIN</code>, <code>GROUP BY</code>, <code>HAVING</code></td>
+<td>https://www.postgresql.org/docs/current/queries-table-expressions.html</td>
+</tr>
+<tr>
+<td>Vistas</td>
+<td>https://www.postgresql.org/docs/current/tutorial-views.html</td>
+</tr>
+<tr>
+<td>Claves foráneas</td>
+<td>https://www.postgresql.org/docs/current/tutorial-fk.html</td>
+</tr>
+<tr>
+<td><code>NOT NULL</code>, <code>UNIQUE</code>, <code>CHECK</code>, claves</td>
+<td>https://www.postgresql.org/docs/current/ddl-constraints.html</td>
+</tr>
+<tr>
+<td>Tipos</td>
+<td>https://www.postgresql.org/docs/current/datatype.html</td>
+</tr>
+<tr>
+<td>Transacciones</td>
+<td>https://www.postgresql.org/docs/current/tutorial-transactions.html</td>
+</tr>
+<tr>
+<td>Aislamiento</td>
+<td>https://www.postgresql.org/docs/current/transaction-iso.html</td>
+</tr>
+<tr>
+<td>Qué es un índice</td>
+<td>https://www.postgresql.org/docs/current/indexes-intro.html</td>
+</tr>
+<tr>
+<td>Índice único</td>
+<td>https://www.postgresql.org/docs/current/indexes-unique.html</td>
+</tr>
+<tr>
+<td>Índice parcial</td>
+<td>https://www.postgresql.org/docs/current/indexes-partial.html</td>
+</tr>
+<tr>
+<td>Ver si se usa el índice</td>
+<td>https://www.postgresql.org/docs/current/indexes-examine.html</td>
+</tr>
+<tr>
+<td><code>EXPLAIN</code></td>
+<td>https://www.postgresql.org/docs/current/using-explain.html</td>
+</tr>
+<tr>
+<td>Anatomía de un índice</td>
+<td>https://use-the-index-luke.com/sql/anatomy</td>
+</tr>
+<tr>
+<td>Índices y <code>WHERE</code></td>
+<td>https://use-the-index-luke.com/sql/where-clause</td>
+</tr>
+<tr>
+<td>Plan de ejecución, en prosa</td>
+<td>https://use-the-index-luke.com/sql/explain-plan</td>
+</tr>
+<tr>
+<td>Formas normales (1FN a 5FN)</td>
+<td>https://zimmer.fresnostate.edu/~sasanr/Teaching-Material/MIS/DBMS/Guide-To-5NF.pdf</td>
+</tr>
+</tbody>
+</table>
+<p>La última es el artículo de William Kent. Si la URL no entra, descarga el PDF en el navegador y súbelo como archivo. Con la primera, la segunda y la tercera forma normal basta para el ejercicio de diseño; la cuarta y la quinta pueden quedarse sin leer.</p>
+<p>Si <code>datatype.html</code> entra como índice vacío, sustituye por las páginas hijas que nombren el tipo que estés usando (numérico, fecha, texto).</p>
+<hr />
+<h2 id="2-frontend-node-y-react">2. Frontend, Node y React<a class="headerlink" href="#2-frontend-node-y-react" title="Permanent link">&para;</a></h2>
+<p>Cuaderno: <code>02 Frontend</code>. Archivos locales: <code>02-frontend-node-react/README.md</code>, <code>02-frontend-node-react/glosario.md</code>.</p>
+<p>HTML semántico, CSS, JavaScript, DOM, HTTP, Node sin framework, React con funciones.</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JavaScript, DOM, eventos y HTTP en un solo libro</td>
+<td>https://eloquentjavascript.net/Eloquent_JavaScript.pdf</td>
+</tr>
+<tr>
+<td>Estructura de una página</td>
+<td>https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content</td>
+</tr>
+<tr>
+<td>Especificidad</td>
+<td>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity</td>
+</tr>
+<tr>
+<td>Flexbox</td>
+<td>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout</td>
+</tr>
+<tr>
+<td>Chuleta de Flexbox</td>
+<td>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</td>
+</tr>
+<tr>
+<td>Chuleta de Grid</td>
+<td>https://css-tricks.com/complete-guide-css-grid-layout/</td>
+</tr>
+<tr>
+<td>Eventos en el navegador</td>
+<td>https://javascript.info/introduction-browser-events</td>
+</tr>
+<tr>
+<td><code>fetch</code></td>
+<td>https://javascript.info/fetch</td>
+</tr>
+<tr>
+<td>Guía de <code>fetch</code></td>
+<td>https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch</td>
+</tr>
+<tr>
+<td>Códigos de estado</td>
+<td>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status</td>
+</tr>
+<tr>
+<td>CORS</td>
+<td>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS</td>
+</tr>
+<tr>
+<td>Qué es Node</td>
+<td>https://nodejs.org/en/learn/getting-started/introduction-to-nodejs</td>
+</tr>
+<tr>
+<td><code>node:http</code></td>
+<td>https://nodejs.org/api/http.html</td>
+</tr>
+<tr>
+<td><code>node:fs</code></td>
+<td>https://nodejs.org/api/fs.html</td>
+</tr>
+<tr>
+<td>Proceso y argumentos</td>
+<td>https://nodejs.org/api/process.html</td>
+</tr>
+<tr>
+<td>Quick Start de React</td>
+<td>https://react.dev/learn</td>
+</tr>
+<tr>
+<td>Props</td>
+<td>https://react.dev/learn/passing-props-to-a-component</td>
+</tr>
+<tr>
+<td>Render condicional</td>
+<td>https://react.dev/learn/conditional-rendering</td>
+</tr>
+<tr>
+<td>Listas y <code>key</code></td>
+<td>https://react.dev/learn/rendering-lists</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>https://react.dev/learn/state-a-components-memory</td>
+</tr>
+<tr>
+<td>Actualizar a partir del estado anterior</td>
+<td>https://react.dev/learn/queueing-a-series-of-state-updates</td>
+</tr>
+<tr>
+<td>Arrays en el estado</td>
+<td>https://react.dev/learn/updating-arrays-in-state</td>
+</tr>
+<tr>
+<td>Formulario controlado</td>
+<td>https://react.dev/learn/reacting-to-input-with-state</td>
+</tr>
+<tr>
+<td><code>useEffect</code></td>
+<td>https://react.dev/learn/synchronizing-with-effects</td>
+</tr>
+<tr>
+<td>Cuándo no hace falta un efecto</td>
+<td>https://react.dev/learn/you-might-not-need-an-effect</td>
+</tr>
+</tbody>
+</table>
+<p>El PDF de Eloquent JavaScript cubre el lenguaje. Las páginas de javascript.info y de MDN están para el navegador y para HTTP, que es donde se atascan los ejercicios 2, 3 y 7. React va aparte: el libro no lo trata.</p>
+<hr />
+<h2 id="3-sistemas">3. Sistemas<a class="headerlink" href="#3-sistemas" title="Permanent link">&para;</a></h2>
+<p>Cuaderno: <code>03 Sistemas</code>. Archivos locales: <code>04-sistemas/README.md</code>, <code>04-sistemas/glosario.md</code>.</p>
+<p>Ubuntu, SSH, firewall, Nginx, y Docker (imagen, contenedor, volumen, red, Compose).</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shell, permisos, procesos, redirecciones</td>
+<td>Descargar el PDF desde https://linuxcommand.org/tlcl.php (edición 25.12, <code>TLCL-25.12A.pdf</code>) y subirlo como archivo</td>
+</tr>
+<tr>
+<td>Primer arranque: usuario, sudo, SSH, UFW</td>
+<td>https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-24-04</td>
+</tr>
+<tr>
+<td>Clave SSH</td>
+<td>https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server</td>
+</tr>
+<tr>
+<td>UFW</td>
+<td>https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu</td>
+</tr>
+<tr>
+<td>systemd y <code>journalctl</code></td>
+<td>https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units</td>
+</tr>
+<tr>
+<td>Nginx, guía breve oficial</td>
+<td>https://nginx.org/en/docs/beginners_guide.html</td>
+</tr>
+<tr>
+<td>Nginx en Ubuntu</td>
+<td>https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-24-04</td>
+</tr>
+<tr>
+<td>Qué es un contenedor</td>
+<td>https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/</td>
+</tr>
+<tr>
+<td>Qué es una imagen</td>
+<td>https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/</td>
+</tr>
+<tr>
+<td>Capas</td>
+<td>https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/</td>
+</tr>
+<tr>
+<td>Dockerfile</td>
+<td>https://docs.docker.com/build/concepts/dockerfile/</td>
+</tr>
+<tr>
+<td>Publicar un puerto</td>
+<td>https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/</td>
+</tr>
+<tr>
+<td>Volúmenes y bind mounts</td>
+<td>https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/</td>
+</tr>
+<tr>
+<td>Varios contenedores y red</td>
+<td>https://docs.docker.com/get-started/docker-concepts/running-containers/multi-container-applications/</td>
+</tr>
+<tr>
+<td>Modelo de Compose</td>
+<td>https://docs.docker.com/compose/intro/compose-application-model/</td>
+</tr>
+<tr>
+<td>PHP en Docker</td>
+<td>https://docs.docker.com/guides/php/</td>
+</tr>
+<tr>
+<td>Imagen oficial de Postgres</td>
+<td>https://hub.docker.com/_/postgres</td>
+</tr>
+<tr>
+<td>Imagen oficial de Nginx</td>
+<td>https://hub.docker.com/_/nginx</td>
+</tr>
+<tr>
+<td>Imagen oficial de PHP</td>
+<td>https://hub.docker.com/_/php</td>
+</tr>
+</tbody>
+</table>
+<p>En las páginas de Docker Hub importa la descripción de variables, puertos y volumen. Si NotebookLM solo captura el escaparate, copia esa sección a un documento y súbelo.</p>
+<p>El libro de Shotts tiene traducción al español más vieja que la edición 25.12. Para el cuaderno usa el PDF inglés actual.</p>
+<hr />
+<h2 id="4-backend-php">4. Backend PHP<a class="headerlink" href="#4-backend-php" title="Permanent link">&para;</a></h2>
+<p>Cuaderno: <code>04 PHP</code>. Archivos locales: <code>05-backend-php/README.md</code>, <code>05-backend-php/glosario.md</code>.</p>
+<p>PHP 8, petición y respuesta, validación, escapar la salida, PDO, sesión, Composer. Sin Laravel.</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mapa de prácticas actuales (una sola página larga)</td>
+<td>https://phptherightway.com/</td>
+</tr>
+<tr>
+<td>Tipos</td>
+<td>https://www.php.net/manual/es/language.types.php</td>
+</tr>
+<tr>
+<td>Línea de comandos</td>
+<td>https://www.php.net/manual/es/features.commandline.php</td>
+</tr>
+<tr>
+<td><code>$_GET</code>, <code>$_POST</code>, <code>$_SERVER</code></td>
+<td>https://www.php.net/manual/es/reserved.variables.php</td>
+</tr>
+<tr>
+<td>Excepciones</td>
+<td>https://www.php.net/manual/es/language.exceptions.php</td>
+</tr>
+<tr>
+<td><code>htmlspecialchars</code></td>
+<td>https://www.php.net/manual/es/function.htmlspecialchars.php</td>
+</tr>
+<tr>
+<td><code>password_hash</code></td>
+<td>https://www.php.net/manual/es/function.password-hash.php</td>
+</tr>
+<tr>
+<td><code>password_verify</code></td>
+<td>https://www.php.net/manual/es/function.password-verify.php</td>
+</tr>
+<tr>
+<td>Sesiones</td>
+<td>https://www.php.net/manual/es/book.session.php</td>
+</tr>
+<tr>
+<td>Consultas preparadas con PDO</td>
+<td>https://www.php.net/manual/es/pdo.prepared-statements.php</td>
+</tr>
+<tr>
+<td>Errores de PDO</td>
+<td>https://www.php.net/manual/es/pdo.error-handling.php</td>
+</tr>
+<tr>
+<td>Composer</td>
+<td>https://getcomposer.org/doc/01-basic-usage.md</td>
+</tr>
+<tr>
+<td>Estilo PSR-12</td>
+<td>https://www.php-fig.org/psr/psr-12/</td>
+</tr>
+<tr>
+<td>Inyección SQL</td>
+<td>https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</td>
+</tr>
+<tr>
+<td>XSS</td>
+<td>https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html</td>
+</tr>
+<tr>
+<td>Sesión, en producción</td>
+<td>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html</td>
+</tr>
+<tr>
+<td>Configuración de PHP</td>
+<td>https://cheatsheetseries.owasp.org/cheatsheets/PHP_Configuration_Cheat_Sheet.html</td>
+</tr>
+</tbody>
+</table>
+<p>Si una página <code>/es/</code> entra vacía o a medias, cambia <code>es</code> por <code>en</code> en la misma ruta. El texto inglés del manual es el que se actualiza antes.</p>
+<p><code>book.session.php</code> es un índice. Si no trae el texto, sustituye por <code>session.examples.php</code>, <code>session.security.php</code> y <code>function.session-start.php</code> en el mismo manual.</p>
+<hr />
+<h2 id="5-uiux">5. UI/UX<a class="headerlink" href="#5-uiux" title="Permanent link">&para;</a></h2>
+<p>Cuaderno: <code>05 UI UX</code>. Archivos locales: <code>07-ui-ux/README.md</code>, <code>07-ui-ux/glosario.md</code>.</p>
+<p>Flujo, estados, jerarquía, accesibilidad, componentes, prueba con una persona. Figma no está: su curso vive dentro de la aplicación y no se importa.</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definición de accesibilidad</td>
+<td>https://www.w3.org/WAI/fundamentals/accessibility-intro/</td>
+</tr>
+<tr>
+<td>Accesibilidad en la práctica</td>
+<td>https://web.dev/learn/accessibility/</td>
+</tr>
+<tr>
+<td>Contraste, foco, nombre del control (WCAG 2.2, referencia rápida)</td>
+<td>https://www.w3.org/WAI/WCAG22/quickref/</td>
+</tr>
+<tr>
+<td>Diez heurísticos</td>
+<td>https://www.nngroup.com/articles/ten-usability-heuristics/</td>
+</tr>
+<tr>
+<td>Estado vacío</td>
+<td>https://www.nngroup.com/articles/empty-state-interface-design/</td>
+</tr>
+<tr>
+<td>Mensajes de error</td>
+<td>https://www.nngroup.com/articles/error-message-guidelines/</td>
+</tr>
+<tr>
+<td>Errores en formularios</td>
+<td>https://www.nngroup.com/articles/errors-forms-design-guidelines/</td>
+</tr>
+<tr>
+<td>Leyes de UX (índice; si entra vacío, sube cada ley)</td>
+<td>https://lawsofux.com/</td>
+</tr>
+<tr>
+<td>Ley de Jakob</td>
+<td>https://lawsofux.com/jakobs-law/</td>
+</tr>
+<tr>
+<td>Proximidad</td>
+<td>https://lawsofux.com/law-of-proximity/</td>
+</tr>
+<tr>
+<td>Fitts</td>
+<td>https://lawsofux.com/fittss-law/</td>
+</tr>
+<tr>
+<td>Hick</td>
+<td>https://lawsofux.com/hicks-law/</td>
+</tr>
+<tr>
+<td>Diseño que se adapta al ancho</td>
+<td>https://web.dev/learn/design/</td>
+</tr>
+<tr>
+<td>Tipografía: reglas cortas</td>
+<td>https://practicaltypography.com/summary-of-key-rules.html</td>
+</tr>
+<tr>
+<td>Cómo nombra otro sistema el color, el tipo y los componentes</td>
+<td>https://m3.material.io/</td>
+</tr>
+</tbody>
+</table>
+<p>Material Design es una aplicación web. Si la importación sale casi vacía, no insistas: los heurísticos, el estado vacío y el contraste ya cubren los ejercicios. El libro Refactoring UI no tiene edición pública; no lo subas.</p>
+<p><code>web.dev/learn/accessibility/</code> y <code>web.dev/learn/design/</code> pueden entrar como portada del curso. En ese caso sube los módulos sueltos que fallen en el ejercicio (contraste, foco, etiquetas, rejilla, tipo).</p>
+<hr />
+<h2 id="proyecto-integrador">Proyecto integrador<a class="headerlink" href="#proyecto-integrador" title="Permanent link">&para;</a></h2>
+<p>No necesita fuentes nuevas. El producto está descrito en <code>proyecto-integrador.md</code>: súbelo como archivo en un cuaderno aparte, junto con los cinco <code>README.md</code>, y pregunta ahí cómo encajan las piezas. El detalle de SQL, PHP, React, Docker o accesibilidad se consulta en el cuaderno de esa asignatura, no en este.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.prune", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
