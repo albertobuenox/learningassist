@@ -6,8 +6,8 @@
   --md-primary-fg-color--dark: #c41a57;
   --md-primary-bg-color: #272822;
   --md-primary-bg-color--light: #f8f8f2;
-  --md-accent-fg-color: #a6e22e;
-  --md-accent-fg-color--transparent: #a6e22e1a;
+  --md-accent-fg-color: #c4f04a;
+  --md-accent-fg-color--transparent: #c4f04a1a;
   --md-accent-bg-color: #272822;
   --md-accent-bg-color--light: #f8f8f2;
 }
@@ -71,15 +71,20 @@
   border-bottom: 1px solid #49483e;
 }
 
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: #d4d4c8;
+  opacity: 1;
+}
+
 [data-md-color-scheme="slate"] .md-tabs__link--active,
 [data-md-color-scheme="slate"] .md-tabs__link:hover {
-  color: #a6e22e;
+  color: #c4f04a;
 }
 
 [data-md-color-scheme="slate"] .md-nav__link--active,
 [data-md-color-scheme="slate"] .md-nav__link--active:focus,
 [data-md-color-scheme="slate"] .md-nav__link--active:hover {
-  color: #f92672;
+  color: #ff6188;
 }
 
 /* Admonition accents closer to Monokai */
